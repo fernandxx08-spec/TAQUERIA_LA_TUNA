@@ -1,9 +1,12 @@
 .git
-.ven
+.venv
 venv
 env
 ENV
-_pycache_/
-*._pyc
+
+__pycache__/
+*.pyc
+
 db.sqlite3
+
 .DS_Store

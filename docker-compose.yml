@@ -1,11 +1,16 @@
+version: "3.9"
+
 services:
-  
   web:
     build: .
-    command: python Sena/manage.py runserver 0.0.0.0:8000
+    container_name: taqueria_django
+
+    working_dir: /app
+
     volumes:
-      - .:/app
+      - ./Proyecto_GP4:/app
+
     ports:
       - "8000:8000"
-    environment:
-      -  DEBUG=1
+
+    command: python manage.py runserver 0.0.0.0:8000

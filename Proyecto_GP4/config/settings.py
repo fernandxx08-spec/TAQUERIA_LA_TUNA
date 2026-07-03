@@ -90,7 +90,7 @@ DATABASES = {
         'NAME': 'la_tuna',
         'USER': 'root',
         'PASSWORD': '123456789', 
-        'HOST': 'localhost',
+        'HOST': 'host.docker.internal',
         'PORT': '3306',
     }
 }
