@@ -1,16 +1,18 @@
 version: "3.9"
 
 services:
+
   web:
     build: .
-    container_name: taqueria_django
 
-    working_dir: /app
+    container_name: taqueria
+
+    command: python manage.py runserver 0.0.0.0:8000
 
     volumes:
-      - ./Proyecto_GP4:/app
+      - ./Proyecto_GP4:/code
 
     ports:
       - "8000:8000"
 
-    command: python manage.py runserver 0.0.0.0:8000
+    restart: always
