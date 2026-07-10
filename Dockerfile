@@ -5,7 +5,6 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /code
 
-# Instalar dependencias del sistema para WeasyPrint
 RUN apt-get update && apt-get install -y \
     gcc \
     libcairo2 \
@@ -23,6 +22,8 @@ RUN pip install -r requirements.txt
 
 COPY Proyecto_GP4/ .
 
+RUN chmod +x start.sh
+
 EXPOSE 8000
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["./start.sh"]
