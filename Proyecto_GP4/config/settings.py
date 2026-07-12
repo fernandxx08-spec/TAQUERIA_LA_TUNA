@@ -156,3 +156,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #nueva idea de contraseña para los backup
 
 BACKUP_PASSWORD = "Admin123"
+STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
